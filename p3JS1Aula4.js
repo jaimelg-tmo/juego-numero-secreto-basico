@@ -1,15 +1,17 @@
 //  Aula 4: Código final.
 
 //  Variables.
-let numeroSecreto = 7;
+let numeroSecreto = Math.floor(Math.random()*10)+1;
 let numeroDeUsuario = 0;
 let intentos = 1;
 let maximosIntentos = 3;
 
-while (numeroDeUsuario != numeroSecreto) {
-    numeroDeUsuario = prompt('Por favor, indica un número de 1 al 10.');
+console.log(numeroSecreto);
 
-    console.log(numeroDeUsuario);
+while (numeroDeUsuario != numeroSecreto) {
+    numeroDeUsuario = parseInt(prompt('Por favor, indica un número de 1 al 10.'));
+
+    console.log(typeof(numeroDeUsuario));
        if (numeroDeUsuario == numeroSecreto) {
     //  La condición se cumple.
             alert(`¡Felicitaciones!, has acertado el número secreto que es ${numeroSecreto}. Lo lograste en ${intentos} ${intentos == 1 ? 'intento' : 'intentos'}.`);
